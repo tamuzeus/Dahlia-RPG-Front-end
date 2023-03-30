@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
@@ -63,6 +64,8 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-display: auto;
   }
+
+  -webkit-tap-highlight-color: transparent;
 
 `;
 

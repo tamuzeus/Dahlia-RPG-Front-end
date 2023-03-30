@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FlipCard from "react-card-flip";
 import logo from "../../assents/images/logo.webp"
-import styled from "styled-components";
 import { Front, Body, Tittle, TittleText, Img, LoginArea, FormGroup, FormField, FormLabel, Button, ButtonText, SignUp, SignupArea, Back } from "./styled";
 
 export default function SignIn() {
@@ -126,7 +125,7 @@ export default function SignIn() {
           </Back>
 
           {/*End card area*/}
-          
+
         </FlipCard>
       </Body>
     </>
