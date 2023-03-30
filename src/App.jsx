@@ -1,11 +1,6 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom';
-import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GlobalStyle from "./assents/styles/GlobalStyle";
-import Login from "./pages/login";
+import Login from "../src/pages/Login/index"
 
 function App() {
   return (
@@ -13,7 +8,8 @@ function App() {
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/" element={<Login />}/>
+          <Route path="/" element={<Login />} />
+          <Route path="/welcome" element={'###'} />
         </Routes>
       </Router>
     </>

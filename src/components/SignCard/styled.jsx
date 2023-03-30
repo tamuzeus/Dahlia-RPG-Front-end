@@ -1,91 +1,20 @@
-import { useState } from "react";
-import FlipCard from "react-card-flip";
 import styled from "styled-components";
 
-export default function SignIn() {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  return (
-    <>
-      <Body>
-        <FlipCard isFlipped={isFlipped}>
-          <Front>
-            <Tittle>
-              <Img
-                src="https://1cd1ef4a95.cbaul-cdnwnd.com/e8c5b9933b741eb5018cd1f1d5863418/200000003-e637be637f/450/dahlia1-removebg-preview.webp?ph=1cd1ef4a95"
-                alt="Dahlia-Logo"
-              />
-              <TittleText>{"Dahlia"}</TittleText>
-            </Tittle>
-
-            <LoginArea>
-              <FormGroup className="form__group field">
-                <FormField
-                  type="email"
-                  className="form__field"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                  required
-                />
-                <FormLabel htmlFor="email" className="form__label">
-                  Email
-                </FormLabel>
-              </FormGroup>
-
-              <FormGroup className="form__group field">
-                <FormField
-                  type="password"
-                  className="form__field"
-                  placeholder="Password"
-                  name="password"
-                  id="password"
-                  required
-                />
-                <FormLabel htmlFor="password" className="form__label">
-                  Password
-                </FormLabel>
-              </FormGroup>
-            </LoginArea>
-
-            <Button type="submit">
-              <ButtonText>Login</ButtonText>
-            </Button>
-
-            <SignUp onClick={handleClick}>Sign-Up</SignUp>
-          </Front>
-
-          <Back>
-           
-            <h1>Cadastre-se</h1>
-            <button onClick={handleClick}>Voltar</button>
-          </Back>
-        </FlipCard>
-      </Body>
-    </>
-  );
-}
-
-
-const Front = styled.div`
+export const Front = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-const Back = styled.div`
+export const Back = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;  
+`;
 
-const Body = styled.div`
+export const Body = styled.div`
   background-color: #111;
   width: 35%;
   height: 450px;
@@ -97,7 +26,7 @@ const Body = styled.div`
   }
 `;
 
-const Tittle = styled.div`
+export const Tittle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,14 +34,14 @@ const Tittle = styled.div`
     width: 25%;
 `;
 
-const Img = styled.img`
+export const Img = styled.img`
     width: 150px;
     height: 120px;
     margin-top: 20px;
 `
 
-const TittleText = styled.div`
-    font-family: GreatVibes;
+export const TittleText = styled.div`
+    font-family: GreatVibes, cursive;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -121,14 +50,7 @@ const TittleText = styled.div`
     width: 100%;
 `;
 
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`;
-
-const LoginArea = styled.div`
+export const LoginArea = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,7 +66,23 @@ const LoginArea = styled.div`
     }
 `;
 
-const Button = styled.button`
+export const SignupArea = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    padding: 15px 0 0;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 670px) {
+        width: 100%
+    }
+`;
+
+export const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,34 +155,34 @@ const Button = styled.button`
     }
 `;
 
-const ButtonText = styled.div`
-    font-family: cursive;
+export const ButtonText = styled.div`
+    font-family: cursive, GreatVibes;
     font-size: 24px;
 `;
 
-const SignUp = styled.div`
+export const SignUp = styled.div`
     color: white;
-    font-family: cursive;
+    font-family: cursive, GreatVibes;
     font-size: 20px;
     margin-top: 19px;
     text-decoration: underline;
     cursor: pointer;
-    transition: 2s;
+    transition: 1s;
 
     &:hover{
-        color: #38ef7d;
+        color: #ef38e9;
     }
 
 `
 
-const colors = {
-    primary: '#11998e',
-    secondary: '#38ef7d',
-    white: '#fff',
-    gray: '#9b9b9b'
+export const colors = {
+  primary: '#11998e',
+  secondary: '#38ef7d',
+  white: '#fff',
+  gray: '#9b9b9b'
 }
 
-const FormGroup = styled.div`
+export const FormGroup = styled.div`
     position: relative;
     padding: 15px 0 0;
     margin-top: 5px;
@@ -255,7 +193,7 @@ const FormGroup = styled.div`
   }
 `;
 
-const FormField = styled.input`
+export const FormField = styled.input`
     font-family: inherit;
     width: 100%;
     border: 0;
@@ -300,7 +238,7 @@ const FormField = styled.input`
   }
 `;
 
-const FormLabel = styled.label`
+export const FormLabel = styled.label`
     position: absolute;
     top: 0;
     display: block;
@@ -308,3 +246,4 @@ const FormLabel = styled.label`
     font-size: 1rem;
     color: ${colors.gray};
 `;
+
