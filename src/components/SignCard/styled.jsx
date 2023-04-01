@@ -19,6 +19,7 @@ export const Body = styled.div`
   width: 35%;
   height: 450px;
   border-radius: 20px;
+  user-select: none;
 
   @media only screen and (max-width: 670px) {
     width: 100%;
@@ -50,7 +51,7 @@ export const TittleText = styled.div`
     width: 100%;
 `;
 
-export const LoginArea = styled.div`
+export const LoginArea = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +67,7 @@ export const LoginArea = styled.div`
     }
 `;
 
-export const SignupArea = styled.div`
+export const SignupArea = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +166,6 @@ export const SignUp = styled.div`
     font-family: cursive, GreatVibes;
     font-size: 20px;
     margin-top: 19px;
-    text-decoration: underline;
     cursor: pointer;
     transition: 1s;
 
@@ -176,10 +176,10 @@ export const SignUp = styled.div`
 `
 
 export const colors = {
-  primary: '#11998e',
-  secondary: '#38ef7d',
-  white: '#fff',
-  gray: '#9b9b9b'
+    primary: '#11998e',
+    secondary: '#38ef7d',
+    white: '#fff',
+    gray: '#9b9b9b'
 }
 
 export const FormGroup = styled.div`
@@ -236,6 +236,13 @@ export const FormField = styled.input`
     &:invalid {
         box-shadow:none;
   }
+
+  &:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #111 inset !important;
+  -webkit-text-fill-color: white !important;
+  z-index: 1;
+}
+    
 `;
 
 export const FormLabel = styled.label`

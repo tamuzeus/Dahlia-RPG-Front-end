@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/welcome" element={'###'} />
+          <Route path="/home" element={'Oi amozi, vamo ver filme agora?'} />
         </Routes>
       </Router>
     </>
